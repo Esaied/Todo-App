@@ -1,0 +1,80 @@
+
+
+body{
+    background-color: #222831;
+}
+
+.task-form{
+    background-color: #393E46;
+}
+.btn{
+    width: 15%;
+}
+.text-color{
+    color: #00ADB5;
+}
+.btn{
+    background-color: #00ADB5;
+    border: 1px solid #00ADB5;
+}
+.btn:hover{
+    background-color: transparent;
+    color: #00ADB5;
+    border: 1px solid #00ADB5;
+}
+#taskInput{
+    background-color: #222831;
+    color: #00ADB5;
+}
+input::placeholder{
+    color: #EEEEEE !important;
+}
+.task{
+    background-color: #00ADB5;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.task:hover{
+    width: 80% !important;
+}
+.task i{
+    transition: all 0.5s;
+}
+.task i:hover{
+    color: #FAEF5D;
+}
+#message{
+    font-size: 14px;
+    font-style: italic;
+} 
+
+
+.loader {
+    width: 50px;
+    margin: auto;
+    aspect-ratio: 1;
+    display: grid;
+}
+.loader::before,
+.loader::after {    
+    content:"";
+    grid-area: 1/1;
+    --c:no-repeat radial-gradient(farthest-side,#25b09b 92%,#0000);
+    background: 
+        var(--c) 50%  0, 
+        var(--c) 50%  100%, 
+        var(--c) 100% 50%, 
+        var(--c) 0    50%;
+    background-size: 12px 12px;
+    animation: l12 1s infinite;
+}
+.loader::before {
+    margin: 4px;
+    filter: hue-rotate(45deg);
+    background-size: 8px 8px;
+    animation-timing-function: linear
+}
+
+@keyframes l12 { 
+    100%{transform: rotate(.5turn)}
+}
